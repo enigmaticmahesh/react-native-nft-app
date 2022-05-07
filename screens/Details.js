@@ -12,8 +12,10 @@ import {
   FocusedStatusBar,
   RectButton,
   CircleButton,
+  SubInfo,
+  DetailsDesc,
 } from "../components";
-import { assets, SHADOWS, SIZES } from "../constants";
+import { assets, COLORS, FONTS, SHADOWS, SIZES } from "../constants";
 
 const DetailsHeader = ({ data, navigation }) => {
   return (
@@ -27,6 +29,13 @@ const DetailsHeader = ({ data, navigation }) => {
       <CircleButton
         imgUrl={assets.left}
         handlePress={() => navigation.goBack()}
+        left={15}
+        top={StatusBar.currentHeight + 10}
+      />
+      <CircleButton
+        imgUrl={assets.heart}
+        right={15}
+        top={StatusBar.currentHeight + 10}
       />
     </View>
   );
@@ -66,6 +75,21 @@ export default function Details({ route, navigation }) {
         ListHeaderComponent={() => (
           <>
             <DetailsHeader data={data} navigation={navigation} />
+            <SubInfo />
+            <View style={{ padding: SIZES.font }}>
+              <DetailsDesc data={data} />
+              {data.bids.length > 0 && (
+                <Text
+                  style={{
+                    fontSize: SIZES.font,
+                    fontFamily: FONTS.semiBold,
+                    color: COLORS.primary,
+                  }}
+                >
+                  Current Bids
+                </Text>
+              )}
+            </View>
           </>
         )}
       />
