@@ -18,7 +18,7 @@ export default function SectionWrapper({ title, description, showBtn, mockupImg,
           {showBtn && (
             <Button
               assetUrl={assets.expo}
-              link="deployed nft marketplace rn"
+              link="https://expo.dev/@mahesh.raddyx/new_react_native_app?serviceType=classic&distribution=expo-go"
             />
           )}
         </div>
