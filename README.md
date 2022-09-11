@@ -1,6 +1,11 @@
 # NFT App
 
-Dummy NFT App made with React Native for learning. Notable features are design and UI only. Oh.. you can filter the available NFTs usingn the Search Bar. I will add some other features soon.
+Dummy NFT App made with React Native for learning. 
+
+Functionalities:
+
+- UI and Design
+- Filter the available NFTs usingn the Search Bar
 
 You can view the app with Expo by visiting the landing page for the app.
 
